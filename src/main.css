@@ -1,0 +1,9 @@
+
+.muses-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.muses-grid-img{
+    width: 70%;
+}
