@@ -1,23 +1,19 @@
 <template class="container">
-<h1>Muses</h1>
-<div class="muses-grid">
-    <div
-    class="muse-item" 
-    v-for="muse in muses" 
-    :key="muse.id">
-    <router-link :to="'/muses/' + muse.id">
-        <img :src="muse.imageName" class="muses-grid-img" />
-        <h3>{{ muse.name }}</h3>
-    </router-link>
+    <h1>Muses</h1>
+    <div v-if="muses.length > 0">
+        <MusesList :muses="muses"/>
     </div>
-</div>
 </template>
 
 <script>
 import { muses } from "@/temp-data";
+import MusesList from "@/components/MusesList.vue";
 
 export default {
     name: "MusesPage",
+    components: {
+        MusesList
+    },
     data(){
         return{
             muses,
