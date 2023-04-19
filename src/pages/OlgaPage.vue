@@ -7,18 +7,23 @@
 </template>
 
 <script>
-import { muses } from "@/temp-data";
 import MusesList from "@/components/MusesList.vue";
+import axios from 'axios';
 
 export default {
     name: "OlgaPage",
     components: {
-        MusesList
+        MusesList,
     },
     data (){
         return{
-            muses: muses.filter(muse => muse.museName === 'olga'),
+            muses: [],
         }
+    },
+    async created(){
+       const response = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/');
+       const olga = response.data;
+       this.muses = olga.filter(muse => muse.muse_name === 'olga'); 
     }
 }
 </script>
