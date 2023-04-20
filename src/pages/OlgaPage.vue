@@ -1,5 +1,5 @@
 <template>
-    <h1>Olga</h1>
+    <h1 class="">Olga</h1>
     <div v-if="muses.length > 0">
         <MusesList :muses="muses"/>
     </div>
@@ -9,6 +9,7 @@
 <script>
 import MusesList from "@/components/MusesList.vue";
 import axios from 'axios';
+import 'animate.css';
 
 export default {
     name: "OlgaPage",

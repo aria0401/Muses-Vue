@@ -1,4 +1,5 @@
 <template class="container">
+     <PageLoader />
     <h1>Muses</h1>
     <div v-if="muses.length > 0">
         <MusesList :muses="muses"/>
@@ -7,6 +8,7 @@
 
 <script>
 import MusesList from "@/components/MusesList.vue";
+import PageLoader from "@/components/PageLoader.vue";
 import axios from 'axios';
 
 
@@ -14,6 +16,7 @@ export default {
     name: "MusesPage",
     components: {
         MusesList,
+        PageLoader,
     },
     data(){
         return{
@@ -22,7 +25,6 @@ export default {
     },
     async created(){
        const response = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/');
-    //    console.log(response.data);
        this.muses = response.data;  
     }
 }
