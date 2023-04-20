@@ -40,11 +40,13 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0;
+    top: 16%;
+    /* top: 0; */
     left: 0;
     width: 100vw;
-    height: 100vh;
-    background-color: #333;
+    height: 84%;
+    /* height: 100vh; */
+    background-color: #fff;
     z-index: 999;
 }
 
@@ -52,6 +54,7 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b;
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    margin-bottom: 10rem;
 
     @for $i from 1 through length($colors){
         &:nth-child(#{$i}){

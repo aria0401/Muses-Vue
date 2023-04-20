@@ -1,6 +1,8 @@
 <template class="container">
-     <PageLoader />
     <h1>Muses</h1>
+    <div v-if="!isLoaded">
+        <PageLoader />
+    </div>
     <div v-if="muses.length > 0">
         <MusesList :muses="muses"/>
     </div>
@@ -21,11 +23,13 @@ export default {
     data(){
         return{
             muses: [],
+            isLoaded: false,
         }
     },
     async created(){
        const response = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/');
-       this.muses = response.data;  
+       this.muses = response.data; 
+        setTimeout(function () {  this.isLoaded = true; }.bind(this), 800);
     }
 }
 </script>
