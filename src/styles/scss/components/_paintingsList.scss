@@ -1,0 +1,22 @@
+//PaintingsList
+
+
+.muses-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.muse-item{
+    height: 370px;
+    overflow: hidden;
+
+    &:hover{
+      .muse-grid-img{
+        width: 105%;
+        object-fit: cover;
+        object-position: center center;
+        transition: .3s ease;
+      }
+    }
+}
