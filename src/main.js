@@ -4,9 +4,10 @@ import './styles/css/main.css'
 import * as VueRouter from 'vue-router'
 
 import HomePage from './pages/HomePage.vue'
-import MusesPage from './pages/MusesPage.vue'
+import GalleryPage from './pages/GalleryPage.vue'
 import MuseDetailsPage from './pages/MuseDetailsPage.vue'
 import OlgaPage from './pages/OlgaPage.vue'
+import MarieTheresePage from './pages/MarieTheresePage.vue'
 import NotFoundPage from './pages/NotFoundPage.vue'
 
 createApp(App)
@@ -16,15 +17,18 @@ createApp(App)
             path: '/',
             component: HomePage,
         }, {
-            path: '/muses',
-            component: MusesPage,
+            path: '/gallery',
+            component: GalleryPage,
         }, {
-            path: '/muses/:museId',
+            path: '/gallery/:paintingId',
             component: MuseDetailsPage,
-        },{
+        }, {
             path: '/olga',
             component: OlgaPage,
         }, {
+            path: '/marie-therese',
+            component: MarieTheresePage,
+        },{
             path: '/:pathMatch(.*)*',
             component: NotFoundPage,
         }

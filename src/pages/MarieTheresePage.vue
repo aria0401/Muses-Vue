@@ -16,7 +16,7 @@ import MuseSingle from "@/components/MuseSingle.vue";
 import axios from 'axios';
 
 export default {
-    name: "OlgaPage",
+    name: "MarieTheresePage",
     components: {
         PaintingsList,
         PageLoader,
@@ -34,11 +34,11 @@ export default {
         // get paintings
         const res_paintings = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/paintings/?per_page=100');
         const data = res_paintings.data;
-        const paintings = data.filter(painting => painting.muse_name === 'olga');
+        const paintings = data.filter(painting => painting.muse_name === 'marietherese');
         this.paintings = paintings; 
         this.musePicture = paintings.shift();
         // get muse
-        const res_muse = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/?include[]=194');
+        const res_muse = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/?include[]=197');
         const muse = res_muse.data;
         this.muse = muse[0];
         setTimeout(function () {  this.isLoaded = true; }.bind(this), 600);
