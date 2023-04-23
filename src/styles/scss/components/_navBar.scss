@@ -1,4 +1,23 @@
 //NavBar
-.logo{
-    width: 10%;
+
+.nav-bar{
+
+    .logo{
+        width: 26%;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: var(--black);
+
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+
+    a.router-link-active{
+        color: var(--primary-color);
+    }
 }
+

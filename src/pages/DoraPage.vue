@@ -41,7 +41,7 @@ export default {
         const res_muse = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/?include[]=200');
         const muse = res_muse.data;
         this.muse = muse[0];
-        setTimeout(function () {  this.isLoaded = true; }.bind(this), 600);
+        this.isLoaded = true;
     }
 }
 </script>

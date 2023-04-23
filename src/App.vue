@@ -1,8 +1,10 @@
 <template>
-  <div class="nav-bar">
-    <NavBar />
-  </div>
-  <div class="page-wrap">
+  <header class="d-flex">
+    <div class="nav-bar align-items-end container d-flex justify-content-between">
+      <NavBar />
+    </div>
+  </header>
+  <div class="page-wrap container mt-5 pt-3">
     <router-view></router-view>
   </div>
 </template>
