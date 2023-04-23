@@ -7,6 +7,9 @@
     <router-link to="/gallery">Gallery</router-link>
     <router-link to="/olga">Olga</router-link>
     <router-link to="/marie-therese">Marie-Thérèse</router-link>
+    <router-link to="/dora">Dora</router-link>
+    <router-link to="/francoise">Françoise</router-link>
+    <router-link to="/jacqueline">Jacqueline</router-link>
 </template>
 
 <script>
