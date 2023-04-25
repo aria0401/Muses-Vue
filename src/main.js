@@ -40,7 +40,7 @@ createApp(App)
         }, {
             path: '/jacqueline',
             component: JacquelinePage,
-        },{
+        }, {
             path: '/:pathMatch(.*)*',
             component: NotFoundPage,
         }

@@ -14,6 +14,14 @@
 .nav-bar a.router-link-active {
   color: var(--primary-color);
 }
+.nav-bar .open-menu {
+  background-color: transparent;
+  border: none;
+  width: 3rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-image: url("@/assets/burger-icon.svg");
+}
 
 .muse-single-img {
   width: 40%;

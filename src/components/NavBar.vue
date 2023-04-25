@@ -10,6 +10,7 @@
     <router-link to="/dora">Dora</router-link>
     <router-link to="/francoise">Françoise</router-link>
     <router-link to="/jacqueline">Jacqueline</router-link>
+    <button class="open-menu"></button>
 </template>
 
 <script>

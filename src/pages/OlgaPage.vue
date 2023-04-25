@@ -31,16 +31,11 @@ export default {
         }
     },
     async created(){
-        // get paintings
-        const res_paintings = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/paintings/?per_page=100');
-        const data = res_paintings.data;
-        const paintings = data.filter(painting => painting.muse_name === 'olga');
-        this.paintings = paintings; 
-        this.musePicture = paintings.shift();
-        // get muse
-        const res_muse = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/?include[]=194');
-        const muse = res_muse.data;
-        this.muse = muse[0];
+        const response = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/?include[]=194');
+        const muse = response.data[0];
+        this.muse = muse;
+        this.paintings = muse.paintings;
+        this.musePicture = muse.paintings.shift();
         this.isLoaded = true;
     }
 }
