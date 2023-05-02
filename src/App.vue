@@ -1,12 +1,13 @@
 <template>
   <header class="d-flex">
-    <div class="nav-bar align-items-end container d-flex justify-content-center">
+    <div class="nav-bar align-items-end d-flex justify-content-center align-items-center">
       <NavBar />
     </div>
   </header>
-  <div class="page-wrap container mt-5 pt-3">
+  <div class="page-wrap container my-5 pt-3 pt-lg-5">
     <router-view></router-view>
   </div>
+  <footer class="footer">This is the footer</footer>
 </template>
 
 <script>

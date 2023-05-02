@@ -6,7 +6,24 @@ body{
 }
 
 header{
-    height: 5rem;
+    height: var(--header-height);
+    box-shadow: var(--box-shadow);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+footer{
+    background-color: var(--primary-color);
+    color: var(--white);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-wrap{
+    min-height: var(--main-height);
+    // display: flex;
+    // align-items: center;
 }
 
 img{
@@ -15,4 +32,14 @@ img{
 
 h1, a{
     font-family: var(--serif);
+}
+
+a.artworks{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover{
+        color: var(--black);
+    }
 }
