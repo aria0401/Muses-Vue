@@ -1,16 +1,12 @@
 <template>
-    <router-link to="/">
+    <router-link to="/gallery">Gallery</router-link>
+    <router-link to="/" class="a-logo">
     <div>
         <img :src="logo" class="logo"/>
     </div>
     </router-link>
-    <router-link to="/gallery">Gallery</router-link>
-    <router-link to="/olga">Olga</router-link>
-    <router-link to="/marie-therese">Marie-Thérèse</router-link>
-    <router-link to="/dora">Dora</router-link>
-    <router-link to="/francoise">Françoise</router-link>
-    <router-link to="/jacqueline">Jacqueline</router-link>
-    <button class="open-menu"></button>
+    <router-link to="/muses">Muses</router-link>
+
 </template>
 
 <script>

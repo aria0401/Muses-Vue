@@ -1,35 +1,44 @@
 <template>
-    <div v-if="painting">
-        <h1>{{ painting.picture_name }}</h1>
-        <div>
-            <img :src="painting.image_url" />
-        </div>
+    <div v-if="!isLoaded">
+        <PageLoader />
     </div>
-    <div v-else>
-        <NotFoundPage />
+    <MuseSingle :muse="muse" :musePicture="musePicture"/>
+    <div v-if="paintings.length > 0">
+        <PaintingsList :paintings="paintings"/>
     </div>
+    <div v-if="paintings.length === 0">There are no items on this page.</div>
 </template>
 
 <script>
-import NotFoundPage from "./NotFoundPage.vue";
+import PaintingsList from "@/components/PaintingsList.vue";
+import PageLoader from "@/components/PageLoader.vue";
+import MuseSingle from "@/components/MuseSingle.vue";
 import axios from 'axios';
 
 export default {
-    name: "MuseDetailsPage",
+    name: "OlgaPage",
     components: {
-        NotFoundPage,
+        PaintingsList,
+        PageLoader,
+        MuseSingle,
     },
-    async created(){
-       const response = await axios.get(`https://ariadna.dk/mios/WP/wp-json/wp/v2/paintings?include[]=${this.$route.params.paintingId}`);
-       this.painting = response.data[0]; 
-    },
-    data(){
+    data (){
         return{
-            painting: {},
+            paintings: [],
+            muse: {},
+            musePicture: {},
+            isLoaded: false,
         }
     },
+    async created(){
+        const response = await axios.get(`https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/?include[]=${this.$route.params.museId}`);
+        const muse = response.data[0];
+        this.muse = muse;
+        this.paintings = muse.paintings;
+        this.musePicture = muse.paintings.shift();
+        this.isLoaded = true;
+    }
 }
 </script>
 
 
-    

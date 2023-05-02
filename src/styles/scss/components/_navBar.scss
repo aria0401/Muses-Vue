@@ -2,13 +2,18 @@
 
 .nav-bar{
 
-    .logo{
-        width: 26%;
+    // .logo{
+    //     width: 26%;
+    // }
+
+    .a-logo{
+        width: 5rem;
+        margin-inline: 4rem;
     }
 
     a{
         text-decoration: none;
-        font-size: 1.8rem;
+        font-size: 2.3rem;
         color: var(--black);
 
         &:hover{

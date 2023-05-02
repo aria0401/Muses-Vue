@@ -1,6 +1,6 @@
 <template>
   <header class="d-flex">
-    <div class="nav-bar align-items-end container d-flex justify-content-between">
+    <div class="nav-bar align-items-end container d-flex justify-content-center">
       <NavBar />
     </div>
   </header>
