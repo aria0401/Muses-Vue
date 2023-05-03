@@ -14,7 +14,12 @@
 <script>
 export default{
     name: "PaintingsList",
-    props: ['paintings'],
+    props: {
+        paintings: {
+            type:Array,
+            required: true
+        }
+    },
 }
 </script>
 
