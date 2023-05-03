@@ -29,8 +29,8 @@ export default {
         const response = await axios.get(`https://ariadna.dk/mios/WP/wp-json/wp/v2/muse/?include[]=${this.$route.params.museId}`);
         const muse = response.data[0];
         this.muse = muse;
-        this.paintings = muse.paintings.filter((item, index) => { return index != 0 ? item : null });
-        this.musePicture = muse.paintings[0];
+        this.paintings = muse.paintings.filter(item => item.selected != '1');
+        this.musePicture = muse.paintings.filter(item => item.selected == '1')[0];
         this.isLoaded = true;
     },
     methods: {
