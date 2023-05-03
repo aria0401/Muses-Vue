@@ -4,7 +4,7 @@
       <NavBar />
     </div>
   </header>
-  <div class="page-wrap container my-5 pt-3 pt-lg-5">
+  <div class="page-wrap container my-5 py-3 py-lg-5">
     <router-view></router-view>
   </div>
   <footer class="footer">This is the footer</footer>

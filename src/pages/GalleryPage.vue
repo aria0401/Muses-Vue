@@ -1,5 +1,5 @@
 <template class="container">
-    <h1>Gallery</h1>
+    <h1 class="text-center mb-3 mb-lg-5">Gallery</h1>
     <div v-if="!isLoaded">
         <PageLoader />
     </div>

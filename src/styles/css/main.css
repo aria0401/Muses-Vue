@@ -18,18 +18,42 @@
 .nav-bar a.router-link-active {
   color: var(--primary-color);
 }
-.nav-bar .open-menu {
-  background-color: transparent;
-  border: none;
-  width: 3rem;
-  height: 2rem;
-  background-repeat: no-repeat;
-  background-image: url("@/assets/burger-icon.svg");
-}
 
 .muses-page-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.muses-page-grid .muses-item {
+  text-align: center;
+}
+.muses-page-grid .muses-item a {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: var(--sans-serif);
+}
+.muses-page-grid .muses-item:hover a {
+  color: var(--primary-color);
+}
+.muses-page-grid .muses-item img {
+  height: 350px;
+  object-fit: cover;
+}
+@media screen and (max-width: 1400px) {
+  .muses-page-grid .muses-item img {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .muses-page-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .muses-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .muse-single-img {
@@ -41,16 +65,46 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
-
-.muse-item {
+.muses-grid .muse-item {
   height: 370px;
   overflow: hidden;
 }
-.muse-item:hover .muse-grid-img {
+.muses-grid .muse-item:hover .muse-grid-img {
   width: 105%;
   object-fit: cover;
   object-position: center center;
   transition: 0.3s ease;
+}
+@media screen and (max-width: 1400px) {
+  .muses-grid .muse-item {
+    height: 310px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .muses-grid .muse-item {
+    height: 260px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .muses-grid .muse-item {
+    height: 190px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .muses-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .muses-grid .muse-item {
+    height: 190px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .muses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .muses-grid .muse-item {
+    height: 200px;
+  }
 }
 
 .page-loader {
@@ -58,7 +112,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: var(--header-height);
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -71,6 +125,7 @@
   height: 40px;
   margin-right: 10px;
   opacity: 0.2;
+  margin-bottom: 10rem;
 }
 .cube:nth-child(1) {
   background-color: #8cc271;

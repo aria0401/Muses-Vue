@@ -1,4 +1,41 @@
 .muses-page-grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+
+    .muses-item {
+        text-align: center;
+
+        a{
+            color: var(--black);
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-family: var(--sans-serif);
+
+        }
+
+        &:hover a{
+            color: var(--primary-color);
+        }
+
+        img{
+            height: 350px;
+            object-fit: cover;
+        }
+    }
+
+    @media screen and (max-width: 1400px){
+        .muses-item img{
+            height: 280px;
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }

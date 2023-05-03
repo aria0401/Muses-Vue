@@ -2,23 +2,18 @@
     <div v-if="!isLoaded">
         <PageLoader />
     </div>
-    <MuseSingle :muse="muse" :musePicture="musePicture"/>
-    <div v-if="paintings.length > 0">
-        <PaintingsList :paintings="paintings"/>
-    </div>
+    <MuseSingle :muse="muse" :musePicture="musePicture" :paintings="paintings"/>
     <div v-if="paintings.length === 0">There are no items on this page.</div>
 </template>
 
 <script>
-import PaintingsList from "@/components/PaintingsList.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import MuseSingle from "@/components/MuseSingle.vue";
 import axios from 'axios';
 
 export default {
-    name: "OlgaPage",
+    name: "MuseDetailsPage",
     components: {
-        PaintingsList,
         PageLoader,
         MuseSingle,
     },
@@ -37,6 +32,7 @@ export default {
         this.paintings = muse.paintings;
         this.musePicture = muse.paintings.shift();
         this.isLoaded = true;
+        // console.log(muse);
     }
 }
 </script>
