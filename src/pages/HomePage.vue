@@ -16,6 +16,7 @@
     
 <script>
 import picasso from '@/assets/pablo-picasso.jpg';
+
 export default {
     name: "HomePage",
     data(){

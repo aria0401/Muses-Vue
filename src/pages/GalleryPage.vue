@@ -13,7 +13,6 @@ import PaintingsList from "@/components/PaintingsList.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import axios from 'axios';
 
-
 export default {
     name: "GalleryPage",
     components: {

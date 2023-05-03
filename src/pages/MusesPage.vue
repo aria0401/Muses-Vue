@@ -15,7 +15,6 @@
 <script>
 import axios from 'axios';
 
-
 export default {
     name: "MusesPage",
     data(){
@@ -26,7 +25,6 @@ export default {
     async created(){
         const response = await axios.get('https://ariadna.dk/mios/WP/wp-json/wp/v2/muse');
         this.muses = response.data.reverse(); 
-        // console.log(response.data);
     }
 }
 </script>
