@@ -2,7 +2,7 @@
     <router-link to="/gallery">Gallery</router-link>
     <router-link to="/" class="a-logo">
     <div>
-        <img :src="`${publicPath}assets/logo.svg`" class="logo"/>
+        <img :src="`${publicPath}/assets/logo.svg`" class="logo"/>
         <!-- <img :src="logo" class="logo"/> -->
     </div>
     </router-link>
