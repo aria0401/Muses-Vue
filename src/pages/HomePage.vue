@@ -2,7 +2,8 @@
     <div class="home-page pt-lg-5">
         <div class="row justify-content-around">
             <div class="col-left col-md-6 col-lg-5 mb-4">
-                <img :src="`${publicPath}pablo-picasso.jpg`"/>
+                <img :src="/assets/pablo-picasso.jpg"/>
+                <!-- <img :src="`${publicPath}pablo-picasso.jpg`"/> -->
                 <!-- <img :src="picasso" /> -->
                 <figcaption class="mt-3">Foto: George Stroud/Getty Images</figcaption>
             </div>
