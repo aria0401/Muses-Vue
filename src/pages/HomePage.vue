@@ -2,7 +2,8 @@
     <div class="home-page pt-lg-5">
         <div class="row justify-content-around">
             <div class="col-left col-md-6 col-lg-5 mb-4">
-                <img :src="picasso" />
+                <img :src="`${publicPath}assets/pablo-picasso.jpg`"/>
+                <!-- <img :src="picasso" /> -->
                 <figcaption class="mt-3">Foto: George Stroud/Getty Images</figcaption>
             </div>
             <div class="col-right col-md-6 col-lg-5">
@@ -15,13 +16,14 @@
 </template>
     
 <script>
-import picasso from '@/assets/pablo-picasso.jpg';
+// import picasso from '@/assets/pablo-picasso.jpg';
 
 export default {
     name: "HomePage",
     data(){
         return{
-            picasso,
+            // picasso,
+            publicPath: process.env.BASE_URL,
         }
     }
 }
