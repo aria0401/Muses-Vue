@@ -56,8 +56,8 @@
   }
 }
 
-.muse-single-img {
-  width: 40%;
+.muse-single-img-sm {
+  cursor: pointer;
 }
 
 .muses-grid {

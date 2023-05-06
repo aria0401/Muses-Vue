@@ -1,12 +1,15 @@
 <template>
     <div class="row">
-        <img :src="musePicture.image_url" class="muse-single-img col-lg-6"/>
+        <div class="col-lg-4">
+            <img :src="musePicture.image_url" class="muse-single-img-lg"/>
+            <p>{{ musePicture.picture_name }} {{ musePicture.year ? ' (' + musePicture.year + ')': ''}}</p>
+        </div>
         <div class="col-6">
             <div v-html="muse.text"></div>
             <h2 class="mt-5 mb-4">Other pictures of {{ muse.muse_name }}</h2>
             <div class="muse-paintings row">
                 <div v-for="painting in paintings" :key="painting.id" class="col-lg-2">
-                    <img :src="painting.image_url" @click="updatePicture(painting.id)" />
+                    <img :src="painting.image_url" @click="updatePicture(painting.id)" class="muse-single-img-sm"/>
                 </div>
             </div>
         </div>
