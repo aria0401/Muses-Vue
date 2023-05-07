@@ -1,6 +1,6 @@
 <template class="container">
     <div class="muses-page">
-        <h1 class="text-center  mb-3 mb-lg-5">Muses</h1>
+        <h1 class="text-center  mb-3 mb-lg-5">Muses in Picasso's life</h1>
         <div v-if="muses.length > 0" class="muses-page-grid">
             <div v-for="muse in muses" :key="muse.id" class="muses-item">
                 <router-link :to="'/muses/' + muse.id">
