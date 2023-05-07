@@ -7,7 +7,7 @@
   <div class="page-wrap container my-5 py-3 py-lg-5">
     <router-view></router-view>
   </div>
-  <footer class="footer">This is the footer</footer>
+  <footer class="footer container">This is a school project from the Multimedia Design program at KEA.</footer>
 </template>
 
 <script>
