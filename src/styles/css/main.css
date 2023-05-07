@@ -56,8 +56,31 @@
   }
 }
 
+.muse-single-img-lg {
+  height: 34rem;
+  object-fit: cover;
+}
+
 .muse-single-img-sm {
   cursor: pointer;
+  height: 8rem;
+  object-fit: cover;
+}
+
+.picture-name {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.link-wiki {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.link-wiki:hover {
+  color: var(--black);
 }
 
 .muses-grid {
@@ -107,12 +130,20 @@
   }
 }
 
+.p-year {
+  font-size: 1.5rem;
+}
+
+.p-tech {
+  font-size: 1.3rem;
+}
+
 .page-loader {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: var(--header-height);
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -125,7 +156,6 @@
   height: 40px;
   margin-right: 10px;
   opacity: 0.2;
-  margin-bottom: 10rem;
 }
 .cube:nth-child(1) {
   background-color: #8cc271;
