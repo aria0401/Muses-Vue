@@ -2,13 +2,13 @@
     <div class="row col-lg-10 mx-auto">
         <div class="d-none d-md-block col-lg-5">
             <img :src="musePicture.image_url" class="muse-single-img-lg"/>
-            <p class="picture-name">{{ musePicture.picture_name }} {{ musePicture.year ? ' (' + musePicture.year + ')': ''}}</p>
+            <p class="picture-name text-capitalize">{{ musePicture.picture_name }} {{ musePicture.year ? ' (' + musePicture.year + ')': ''}}</p>
         </div>
         <div class="col-lg-7 px-xl-5">
             <div v-html="muse.text"></div>
             <div class="d-md-none">
                 <img :src="musePicture.image_url" class="muse-single-img-lg"/>
-                <p class="picture-name">{{ musePicture.picture_name }} {{ musePicture.year ? ' (' + musePicture.year + ')': ''}}</p>
+                <p class="picture-name text-capitalize">{{ musePicture.picture_name }} {{ musePicture.year ? ' (' + musePicture.year + ')': ''}}</p>
             </div>
             <h2 class="mt-5 mb-4">Other pictures of {{ muse.muse_name }}</h2>
             <div class="muse-paintings row">

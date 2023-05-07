@@ -1,7 +1,7 @@
 <template>
     <div v-if="painting" class="col-md-8 col-lg-6 col-xl-5 mx-auto">
         <div class="">
-            <h1>{{ painting.picture_name }} {{ painting.year ? ' (' + painting.year + ')': ''}}</h1>
+            <h1 class="text-capitalize text-center">{{ painting.picture_name }} {{ painting.year ? ' (' + painting.year + ')': ''}}</h1>
             <img :src="painting.image_url" class="mb-3"/>
         </div>
         <div class="">
